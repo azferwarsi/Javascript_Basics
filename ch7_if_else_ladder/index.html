@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>if else ladder</title>
+     
+    
+    <script>
+        // Student grading system
+        
+        let javascript=parseInt(prompt("plase enter JS Marks"));
+        let java=parseInt(prompt("plase enter Java Marks"));
+        let dotnet=parseInt(prompt("plase enter Dotnet Marks"));
+
+        let total=javascript+java+dotnet;
+        document.write("Total marks: "+total)
+
+        let avg=total/3;
+        document.write("Average marks: "+avg)
+
+        if(javascript>=35 && java>=35 && dotnet>=35){
+            document.write("Result: Passed ")
+            if(avg>=35 && avg<60){
+                document.write("Grade: C ")
+            }else if(avg>=60 && avg<=70){
+                document.write("Grade: B ")
+            }else {
+                document.write("Grade: A ")
+            }
+        }
+        else{
+            documnet.write("Result:Failued ")
+        }
+    
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validation: Regular expression</title>
+    <script>
+        function validate(){
+            let valid=false;
+            let exp=/^[A-Za-z]+$/;
+            let username=document.myform.uname.value;
+            let result=exp.test(username);
+
+            if(result){
+                alert("Validation successful");
+            }else{
+                alert("Validation failed");
+                document.myform.uname.focus();
+                return false;
+            }
+
+        }
+    </script>
+</head>
+<body>
+    <h1>User Registration</h1>
+    <form action="regular.jsp" name="myform" onsubmit="return validate()">
+        <label for="username"> Username</label>
+        <input type="text" name="uname" id="username">
+        <input type="submit" value="submit">
+    </form>
+</body>
+</html>

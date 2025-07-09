@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Local and global variable</title>
+
+    <script>
+        var y=30 // global variable
+        function fun1(){
+            let x=20;  // here x is local variable which is accesible only within this function
+            document.write("Inside fun1 X: "+x+"<br>")
+            document.write("Inside fun1 Y: "+y+"<br>")
+        }
+        function fun2(){
+            let a=10;  // here x is local variable which is accesible only within this function
+            document.write("Inside fun2 a: "+a+"<br>")
+            document.write("Inside fun2 Y: "+y+"<br>")
+        }
+        fun1();
+        fun2();
+        document.write("global varibale y outside the function "+y);
+       
+        // document.write("global varibale y outside the function "+y);
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

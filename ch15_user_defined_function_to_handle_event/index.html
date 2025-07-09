@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>user defined function to handled event->onmouseover and onmouseout</title>
+    <script>
+        function handleMouseOverEvent(x){
+            x.style.color="red";
+            x.style.backgroundColor="yellow";
+            x.innerHTML="MOUSEROVER";
+        }
+
+        function handleMouseOutEvent(y){
+            y.style.color="yellow";
+            y.style.backgroundColor="blue";
+            y.innerHTML="MOUSEOUT";
+        }
+
+    </script>
+</head>
+<body>
+    <p onmouseover="handleMouseOverEvent(this)" onmouseout="handleMouseOutEvent(this)">mouseover/mouseout</p>
+</body>
+</html>

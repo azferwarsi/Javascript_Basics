@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Onfocus and onblur event</title>
+    <script>
+        function handleOnFocus(x){
+            x.style.color="white";
+            x.style.backgroundColor="blue";
+        }
+        function handleOnBlur(x){
+            x.style.color="blue";
+            x.style.backgroundColor="red";
+        }
+    </script>
+</head>
+<body>
+    <input type="text" onfocus="handleOnFocus(this)" onblur="handleOnBlur(this)">
+</body>
+</html>

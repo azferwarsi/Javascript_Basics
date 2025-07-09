@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM: create a node</title>
+    <script>
+
+        // remvoing of node
+        function handleRemove(){
+            let parent=document.getElementById("div1");
+            let child=document.getElementById("p2");
+            parent.removeChild(child);
+        }
+        
+
+        // createion of node and accesing it 
+        function handleCreate(){
+            let parent=document.getElementById("div1");
+
+            let child=document.createElement("p");
+            let text=document.createTextNode("I am a new para here");
+            child.appendChild(text)
+            parent.appendChild(child);
+        }
+    </script>
+</head>
+<body>
+    <div id="div1">
+        <p id="p1">All the power is within you</p>
+        <p id="p2">You can do anythig and everything</p>
+    </div>
+    <input type="button" value="remove" onclick="handleRemove()">
+    <input type="button" value="add" onclick="handleCreate()">
+</body>
+</html>

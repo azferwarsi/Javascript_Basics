@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validating select Menu</title>
+    <script>
+        function validate(){
+            let color=document.myform.color.value;
+            if(color==""){
+                alert("select a color")
+                document.myform.color.focus();
+                return false;
+            }
+            else{
+                alert("Validation is successful");
+                return true;
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1>Select a color</h1>
+    <form  name="myform" action="select.php" onsubmit="return validate()">
+        <select name="color" id="">
+            <option value="">Select a color</option>
+            <option value="blue">Blue</option>
+            <option value="green">green</option>
+            <option value="yellow">yellow</option>
+
+            <input type="submit" value="submit">
+        </select>
+
+    </form>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Throw custom Error</title>
+    <script>
+         function validateAge(){
+            try{
+                let age=document.getElementById("age").value;
+                if(age==""){
+                    throw "Age can't be empty";
+                }
+                if(age<18){
+                    throw "To young to vote"
+                }
+                else{
+                    throw "You can give vote"
+                }
+            }catch(obj){
+                document.getElementById("errorinfo").innerHTML=obj;
+            }
+            finally{
+                document.getElementById("finallyinfo").innerHTML="Finally block exected";
+            }
+         }  
+    </script>
+</head>
+<body>
+    <input type="text" id="age" placeholder="enter age">
+    <input type="button" value="validate" onclick="validateAge()">
+    <p id="errorinfo"></p>
+    <p id="finallyinfo"></p>
+
+</body>
+</html>

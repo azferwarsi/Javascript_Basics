@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FORM VALIDATION: Check boxes</title>
+    <script>
+        function validate(){
+           let valid=false;
+
+           if(document.getElementById("javascript").checked){
+             valid=true;
+           }
+           else if(document.getElementById("dbms").checked){
+             valid=true;
+           }
+           else if(document.getElementById("react").checked){
+             valid=true;
+           }
+
+           if(valid){
+            alert("Validation successful");
+           }
+           else{
+            alert("Please slecet any one technology ");
+            return false;
+           }
+        }
+    </script>
+</head>
+<body>
+    <h1>Select the Technology:</h1>
+    <form  name="myform" action="select.php" onsubmit="return validate()">
+      <label for="javascript"> Javascript</label>  
+    <input type="checkbox" id="javascript" value="javscript">
+    <label for="dbms"> DBMS</label>  
+    <input type="checkbox" id="dbms" value="dbms">
+    <label for="react"> React JS</label>  
+    <input type="checkbox" id="react" value="react">
+
+    <input type="submit" value="submit">
+    </form>
+</body>
+</html>

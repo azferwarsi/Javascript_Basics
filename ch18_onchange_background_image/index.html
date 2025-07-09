@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>onchange background image change</title>
+    <script>
+        function handleOnchangeEvent(a){
+            document.body.style.backgroundImage="url('"+a+"')";
+
+        }
+    </script>
+</head>
+<body>
+    <select name="" id="" onchange="handleOnchangeEvent(this.value)">
+        <option value="">Selecet a Image</option>
+        <option value="Image/dyd.png">Dyd</option>
+        <option value="Image/photo.jpg">My Photo</option>
+        <option value="Image/winter.jpg">Certificate</option>
+    </select>
+</body>
+</html>
